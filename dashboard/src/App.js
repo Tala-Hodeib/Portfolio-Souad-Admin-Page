@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Login from "./Login.js";
+import Menu_bar from './components/Menu_bar';
 import './App.css';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header>*/}
-      <Login/>
+      <Menu_bar/>
     </div>
   );
 }

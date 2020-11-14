@@ -9,7 +9,7 @@ class Login extends React.Component {
 
     render () {
         return (
-            <div>
+            <div id="Log">
                 <form action="">
                     <h2><span class="entypo-login"><i class="fa fa-sign-in"></i></span> Login</h2>
                     <button class="submit"><span class="entypo-lock"><i class="fa fa-lock"></i></span></button>

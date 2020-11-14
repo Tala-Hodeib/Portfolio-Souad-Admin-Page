@@ -20,8 +20,10 @@ h2 {
 }
 
 body {
-  background: #615b5f;
-  font-family: 'Roboto', sans-serif;
+ 
+  
+}
+#log{
   background-image: url("https://i1.wp.com/www.pixelmatortemplates.com/wp-content/uploads/2015/08/2.jpg"); 
   /*background-color: #cccccc; */
   height: 500px; 
@@ -29,7 +31,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  background: #615b5f;
+  font-family: 'Roboto', sans-serif;
   
+
 }
 
 form {
