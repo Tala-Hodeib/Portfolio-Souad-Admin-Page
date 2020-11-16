@@ -1,0 +1,54 @@
+.AboutMeText {
+    box-sizing: border-box;
+	border: black solid 1.5px;
+	border-radius: 3px;
+	resize: none;
+	font-size: 15px;
+	line-height: 24px;
+	overflow: auto;
+	height: 150px;
+	padding: 8px;
+	box-shadow: 0px 4px 10px -8px black;
+	
+}
+.chooseFile {
+    /* padding: 10px;
+    margin: 15px;
+    width: 100px; */
+    cursor: pointer;
+	border:solid 1.5px black;
+	border-radius: 3px;
+	resize: none;
+	font-size: 15px;
+	padding: 0px;
+    background-color: black;
+    width: 200px;
+    height: 30px;  
+}
+.confirmation{
+cursor: pointer;
+border: black solid 1.5px;
+border-radius: 3px;
+resize: none;
+font-size: 15px;
+padding: 0px;
+box-shadow: 0px 4px 10px -8px black;
+background-color: black;
+width: 350px;
+height: 30px;
+font-weight: bolder;
+}
+.photo {
+ font-family: Arial, Helvetica, sans-serif;
+ color: coral;
+ padding-left: 50px;
+}
+
+.container {
+    display: grid;
+    justify-content: space-evenly;
+    align-self: flex-end;
+    border: solid;
+    color: crimson;
+   
+}

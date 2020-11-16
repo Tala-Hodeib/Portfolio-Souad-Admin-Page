@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import Login from "./Login.js";
 import Menu_bar from './components/Menu_bar';
 import './App.css';
+import AboutAdminPage from './components/About';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>*/}
-      <Menu_bar/>
+      <AboutAdminPage/>
     </div>
   );
 }
