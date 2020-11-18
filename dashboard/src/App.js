@@ -2,15 +2,15 @@ import logo from './logo.svg';
 import Login from "./Login.js";
 import Menu_bar from './components/Menu_bar';
 import './App.css';
-import Nav from './components/Nav';
+import Nav from '../src/components/Nav';
 import React from 'react';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Experience from './pages/Experience';
-import Skills from './pages/Skills';
-import Contact from './pages/Contact';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Experience from './pages/experiences/Experience';
+import Skills from './pages/skills/Skills';
+import Contact from './pages/contact/Contact';
 
 
 {/*function App() {
@@ -35,10 +35,7 @@ function App() {
           <Route path='/about' component={About} />
           <Route path='/experiences' component={Experience} />
           <Route path='/skills' component={Skills} />
-          <Route path='/contact' component={Contact} />
-
-
-          
+          <Route path='/contact' component={Contact} />        
         </Switch>
       </Router>
     </div>
