@@ -14,7 +14,7 @@ render() {
                 <Router>
                     <Switch>
                         <Route exact path="/home" component={Mainhome} />
-                        <Route  path="/home/addhome" component={Addhome} />
+                        <Route  path="/home/add" component={Addhome} />
                         <Route  path="/home/edithome/:id" component={Edithome}/>
                     </Switch>
                 </Router>

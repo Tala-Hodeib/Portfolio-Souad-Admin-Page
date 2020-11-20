@@ -2,8 +2,8 @@ import React from 'react'
 import './Mainhome.css';
 import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+//import * as AiIcons from 'react-icons/ai';
+//import * as IoIcons from 'react-icons/io';
 
 export default class Mainhome extends React.Component {
   state ={
@@ -12,7 +12,7 @@ export default class Mainhome extends React.Component {
 async componentDidMount(){
     const response = await fetch("http://localhost:8000/home");
     const result=await response.json();
-    console.log(result.homelist[0].title);
+    //console.log(result.homelist[0].title);
     this.setState({home:result.homelist});
     //console.log(this.state);
 
@@ -32,8 +32,11 @@ render() {
                     <th>Image</th>
                     <th>
                       <div>
-                        <span> Add Home </span> 
-                        <FaIcons.FaPlus class='icon'/>
+                        <span> Add Home </span>
+                        <Link to="/home/add">
+                          <FaIcons.FaPlus class='icon'/>
+                        </Link>
+                        
                       </div>
                     </th>
                   </tr>
