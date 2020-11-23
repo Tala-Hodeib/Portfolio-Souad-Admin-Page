@@ -8,4 +8,4 @@ const Editskills = () => {
     )
 }
 
-export default Editskills
+export default Editskills;

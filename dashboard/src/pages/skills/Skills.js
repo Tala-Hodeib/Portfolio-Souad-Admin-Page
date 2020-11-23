@@ -8,13 +8,13 @@ export default class Home extends React.Component {
     
     render() {
         return (
-            <div className='home'>
+            <div className='skills'>
                 <div>
                     <Router>
                         <Switch>
                             <Route exact path="/skills" component={Mainskills} />
-                            <Route  path="/home/addskills" component={Addskills} />
-                            <Route  path="/home/editskills/:id" component={Editskills}/>
+                            <Route  path="/skills/addskills" component={Addskills} />
+                            <Route  path="/skills/editskills/:id" component={Editskills}/>
                         </Switch>
                     </Router>
                     

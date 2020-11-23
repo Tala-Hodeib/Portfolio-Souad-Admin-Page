@@ -1,11 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddContact from './AddContact';
+import EditContact from './EditContact';
+import MainContact from './MainContact';
 
-function Contact() {
-    return (
-        <div className='contact'>
-            <h1>Contact</h1>
-        </div>
-    )
-}
-
-export default Contact
+export default class Home extends React.Component {
+    
+    render() {
+        return (
+            <div className='home'>
+                <div>
+                    <Router>
+                        <Switch>
+                            <Route exact path="/contact" component={MainContact} />
+                            <Route  path="/home/addcontact" component={AddContact} />
+                            <Route  path="/home/editcontact/:id" component={EditContact}/>
+                        </Switch>
+                    </Router>
+                    
+                </div>
+            </div>
+        )
+    }
+    }

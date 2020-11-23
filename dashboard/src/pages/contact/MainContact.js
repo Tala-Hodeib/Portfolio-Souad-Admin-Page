@@ -1,18 +1,18 @@
 import React from 'react'
-import './Mainskills.css';
+import './MainContact.css';
 import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
-export default class Mainskills extends React.Component {
+export default class Maincontact extends React.Component {
   state ={
-    skills:[]
+    contact:[]
 }
 async componentDidMount(){
-    const response = await fetch("http://localhost:8000/skills");
+    const response = await fetch("http://localhost:8000/contact");
     const result=await response.json();
-    console.log(result.skillslist[0].title);
-    this.setState({skills:result.skillslist});
+    console.log(result.contactlist[0].title);
+    this.setState({contact:result.contactlist});
     //console.log(this.state);
 
     
@@ -31,8 +31,8 @@ render() {
                     <th>Image</th>
                     <th>
                       <div>
-                        <span> Add skills </span>
-                         <Link to="/skills/add">
+                        <span> Add contact </span>
+                         <Link to="/contact/add">
                          <FaIcons.FaPlus class='icon'/>
                         </Link>
                       </div>
@@ -45,14 +45,14 @@ render() {
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   {
-                    this.state.skills.map((skills=>
+                    this.state.contact.map((contact=>
                       <tr>
-                    <td>{skills.title}</td>
-                    <td>{skills.description}</td> 
-                    <td>{skills.image}</td> 
+                    <td>{contact.title}</td>
+                    <td>{contact.description}</td> 
+                    <td>{contact.image}</td> 
                     <td>
                         <div >
-                          <Link to="/skills/ediskills/:id" ><FaIcons.FaEdit /></Link>
+                          <Link to="/contact/edicontact/:id" ><FaIcons.FaEdit /></Link>
                           <Link class='icon'><FaIcons.FaMinusCircle  /></Link>
                     </div>
                     </td>
