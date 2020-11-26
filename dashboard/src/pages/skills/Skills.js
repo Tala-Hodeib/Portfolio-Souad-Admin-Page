@@ -13,8 +13,8 @@ export default class Home extends React.Component {
                     <Router>
                         <Switch>
                             <Route exact path="/skills" component={Mainskills} />
-                            <Route  path="/skills/addskills" component={Addskills} />
-                            <Route  path="/skills/editskills/:id" component={Editskills}/>
+                            <Route  path="/skills/add" component={Addskills} />
+                            <Route  path="/skills/edit/:id" component={Editskills}/>
                         </Switch>
                     </Router>
                     
