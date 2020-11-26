@@ -6,18 +6,40 @@ import { Link } from 'react-router-dom';
 
 export default class Maincontact extends React.Component {
   state ={
-    contact:[]
+    contact_links:[]
 }
 async componentDidMount(){
-    const response = await fetch("http://localhost:8000/contact");
+    const response = await fetch("http://localhost:8000/contact_links");
     const result=await response.json();
-    console.log(result.contactlist[0].title);
-    this.setState({contact:result.contactlist});
-    //console.log(this.state);
+    console.log(result);
+    this.setState({contact:result.ContactLinks});
+    console.log(this.state.contact_links);
 
     
 }
+deleteContact=async(id)=>{
+  const requestOptions = {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json','Accept':'application/json' },
 
+
+};
+  const url=`http://localhost:8000/contact_links/delete/${id}`;
+  try {
+    const response = await fetch(url,requestOptions);
+    const result=await response.json();
+    const refreshContact=this.state.contact_links.filter(
+      contact => contact.id!==id
+    );
+    this.setState({contact:refreshContact});
+    console.log(this.state.contact_links);
+
+  } catch (error) {
+    console.log(error);
+
+  }
+
+}
 render() {
   
     return (
@@ -26,9 +48,10 @@ render() {
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                   <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Image</th>
+                    <th>Facebook Link</th>
+                    <th>Youtube Link</th>
+                    <th>Twitter Link</th>
+                    <th>Email</th>
                     <th>
                       <div>
                         <span> Add contact </span>
@@ -47,13 +70,14 @@ render() {
                   {
                     this.state.contact.map((contact=>
                       <tr>
-                    <td>{contact.title}</td>
-                    <td>{contact.description}</td> 
-                    <td>{contact.image}</td> 
+                    <td>{contact.facebook_link}</td>
+                    <td>{contact.youtube_link}</td> 
+                    <td>{contact.twitter_link}</td> 
+                    <td>{contact.email}</td>
                     <td>
                         <div >
                           <Link to="/contact/edicontact/:id" ><FaIcons.FaEdit /></Link>
-                          <Link class='icon'><FaIcons.FaMinusCircle  /></Link>
+                          <Link class='icon'><FaIcons.FaMinusCircle onClick={()=>{this.deleteLink(contact.id)}}  /></Link>
                     </div>
                     </td>
                     </tr>

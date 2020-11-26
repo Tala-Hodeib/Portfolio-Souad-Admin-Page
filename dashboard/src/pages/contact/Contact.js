@@ -4,17 +4,17 @@ import AddContact from './AddContact';
 import EditContact from './EditContact';
 import MainContact from './MainContact';
 
-export default class Home extends React.Component {
+export default class contact extends React.Component {
     
     render() {
         return (
-            <div className='home'>
+            <div className='contact'>
                 <div>
                     <Router>
                         <Switch>
-                            <Route exact path="/contact" component={MainContact} />
-                            <Route  path="/home/addcontact" component={AddContact} />
-                            <Route  path="/home/editcontact/:id" component={EditContact}/>
+                            <Route exact path="/contact_links" component={MainContact} />
+                            <Route  path="/home/addcontact_links" component={AddContact} />
+                            <Route  path="/home/editcontact_links/:id" component={EditContact}/>
                         </Switch>
                     </Router>
                     
