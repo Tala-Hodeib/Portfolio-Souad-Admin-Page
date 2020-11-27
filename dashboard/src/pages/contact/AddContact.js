@@ -1,5 +1,5 @@
 import React from 'react'
-//import Mainskills from './Mainskills';
+import MainContact from './MainContact';
 import { Link } from 'react-router-dom';
 import './AddContact.css';
 
@@ -31,13 +31,13 @@ export default class AddContact extends React.Component {
     render(){
     return (
         <div>
-            <form onSubmit onSubmit={this.createLink}>
+            <form onSubmit={this.createLink}>
                 
-                <input type="text"  name="facebook_link" placeholder="facebook_link"/>
+                <input type="text"  name="facebook_link" placeholder="Facebook"/>
             
-                <input type="text" name="youtube_link" placeholder="youtube_link"/>
-                <input type="text"  name="twitter_link" placeholder="twitter_link"/>
-                <input type="text" name="email" placeholder="email"/>
+                <input type="text" name="youtube_link" placeholder="YouTube"/>
+                <input type="text"  name="twitter_link" placeholder="Twitter"/>
+                <input type="text" name="email" placeholder="Email"/>
                 <input type="submit" value="save"/>
                 <Link to="/contact">
                 <input type="button" value="cancel"/>

@@ -4,7 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
-export default class Maincontact extends React.Component {
+export default class MainContact extends React.Component {
   state ={
     contact_links:[]
 }
@@ -17,7 +17,7 @@ async componentDidMount(){
 
     
 }
-deleteContact=async(id)=>{
+deleteLink=async(id)=>{
   const requestOptions = {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json','Accept':'application/json' },
@@ -48,13 +48,13 @@ render() {
               <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                   <tr>
-                    <th>Facebook Link</th>
-                    <th>Youtube Link</th>
-                    <th>Twitter Link</th>
+                    <th>Facebook </th>
+                    <th>Youtube </th>
+                    <th>Twitter </th>
                     <th>Email</th>
                     <th>
                       <div>
-                        <span> Add contact </span>
+                        <span> Add new </span>
                          <Link to="/contact/add">
                          <FaIcons.FaPlus class='icon'/>
                         </Link>
@@ -68,7 +68,7 @@ render() {
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   {
-                    this.state.contact.map((contact=>
+                    this.state.contact_links.map((contact=>
                       <tr>
                     <td>{contact.facebook_link}</td>
                     <td>{contact.youtube_link}</td> 

@@ -55,7 +55,7 @@ render() {
                     <th>description</th>
                     <th>
                       <div>
-                        <span> Add skills </span>
+                        <span> Add new </span>
                         <Link to="/skills/add">
                           <FaIcons.FaPlus class='icon'/>
                         </Link>

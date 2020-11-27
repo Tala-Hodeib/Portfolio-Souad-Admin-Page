@@ -12,9 +12,9 @@ export default class contact extends React.Component {
                 <div>
                     <Router>
                         <Switch>
-                            <Route exact path="/contact_links" component={MainContact} />
-                            <Route  path="/home/addcontact_links" component={AddContact} />
-                            <Route  path="/home/editcontact_links/:id" component={EditContact}/>
+                            <Route exact path="/contact" component={MainContact} />
+                            <Route  path="/contact/add" component={AddContact} />
+                            <Route  path="/contact/edit/:id" component={EditContact}/>
                         </Switch>
                     </Router>
                     

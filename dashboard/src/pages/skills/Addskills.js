@@ -26,37 +26,6 @@ export default class Addskills extends React.Component {
                 e.target.label.value="";
                 e.target.description.value="";
 
-                    
-                
-
-
-
-            //  const requestOptions = {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json','Accept':'application/json' },
-            //     body: JSON.stringify({title:title, description:description,image:image})
-            // };
-            // fetch('https://localhost:8000/home/add', requestOptions)
-            //     .then(response => response.json());
-            // const requestOptions = {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json','Accept':'application/json' },
-            //     body: JSON.stringify({ title:title ,description:description,image :image})
-            // };
-
-            
-            // //console.log(e)
-            
-            
-            // //console.log(title, description, image);
-    
-            // const url=(`https://localhost:8000/home/add`,requestOptions);
-            // const response= await fetch(url);
-            // const result= await response.json();
-            // console.log(result);
-            //axios.POST(`https://localhost:8000/home/add`,{title:title, description:description,image:image});
-            
-                //.then(data => this.setState({ postId: data.id }));
            
        
        
