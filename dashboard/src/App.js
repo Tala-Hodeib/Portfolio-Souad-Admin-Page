@@ -13,16 +13,7 @@ import Skills from './pages/skills/Skills';
 import Contact from './pages/contact/Contact';
 
 
-{/*function App() {
-  return (
-    <div className="App">
-     
-      <Nav/>
-    </div>
-  );
-}
 
-export default App;*/}
 
 
 function App() {

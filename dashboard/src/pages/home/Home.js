@@ -9,13 +9,13 @@ export default class Home extends React.Component {
     
 render() {
     return (
-        <div className='home'>
+        <div className='home'>  
             <div>
                 <Router>
                     <Switch>
                         <Route exact path="/home" component={Mainhome} />
                         <Route  path="/home/add" component={Addhome} />
-                        <Route  path="/home/edithome/:id" component={Edithome}/>
+                        <Route  path="/home/edit/:id" component={Edithome}   />
                     </Switch>
                 </Router>
                 
