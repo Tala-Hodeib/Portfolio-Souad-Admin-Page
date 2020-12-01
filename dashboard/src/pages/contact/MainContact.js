@@ -9,10 +9,10 @@ export default class MainContact extends React.Component {
     contact_links:[]
 }
 async componentDidMount(){
-    const response = await fetch("http://localhost:8000/contact_links");
+    const response = await fetch("http://localhost:8000/contact");
     const result=await response.json();
     console.log(result);
-    this.setState({contact:result.ContactLinks});
+    this.setState({contact_links:result.links});
     console.log(this.state.contact_links);
 
     
@@ -31,7 +31,7 @@ deleteLink=async(id)=>{
     const refreshContact=this.state.contact_links.filter(
       contact => contact.id!==id
     );
-    this.setState({contact:refreshContact});
+    this.setState({contact_links:refreshContact});
     console.log(this.state.contact_links);
 
   } catch (error) {
@@ -43,6 +43,7 @@ deleteLink=async(id)=>{
 render() {
   
     return (
+      
           <div class='tbl'>
             <div class="tbl-header">
               <table cellpadding="0" cellspacing="0" border="0">
@@ -68,15 +69,16 @@ render() {
               <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                   {
-                    this.state.contact_links.map((contact=>
-                      <tr>
+                    
+                    this.state.contact_links.map(((contact, index)=>
+                      <tr key={index}>
                     <td>{contact.facebook_link}</td>
                     <td>{contact.youtube_link}</td> 
                     <td>{contact.twitter_link}</td> 
                     <td>{contact.email}</td>
                     <td>
                         <div >
-                          <Link to="/contact/edicontact/:id" ><FaIcons.FaEdit /></Link>
+                          <Link to={{pathname:`/contact/edit/${contact.id}`,state:{contact}}} ><FaIcons.FaEdit /></Link>
                           <Link class='icon'><FaIcons.FaMinusCircle onClick={()=>{this.deleteLink(contact.id)}}  /></Link>
                     </div>
                     </td>

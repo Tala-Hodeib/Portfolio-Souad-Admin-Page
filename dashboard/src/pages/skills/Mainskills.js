@@ -71,14 +71,14 @@ render() {
                 <tbody>
                   {
                     
-                     this.state.skills.map((skill=>
-                       <tr>
+                     this.state.skills.map(((skill,index)=>
+                       <tr key={index} >
                      <td>{skill.name}</td>
                      <td>{skill.label}</td> 
                      <td>{skill.description}</td> 
                      <td>
                         <div >
-                          <Link to="/skills/editskills/:id" ><FaIcons.FaEdit /></Link>
+                          <Link to={{pathname:`/skills/edit/${skill.id}` ,state:{skill}}} ><FaIcons.FaEdit /></Link>
                           <Link class='icon'><FaIcons.FaMinusCircle onClick={()=>{this.deleteSkills(skill.id)}}  /></Link>
                      </div>
                      </td>
